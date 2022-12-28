@@ -194,7 +194,7 @@
                           on:keydown|preventDefault={(event) =>
               event.key === "Enter" ||
               (event.key === " " && console.log("/products"))}
-                        class={currentSize === size ? 'border-purple-300 bg-purple-100' : 'border-gray-100'}
+                        class={currentSize === size ? 'border-purple-300 bg-red-400' : 'border-gray-100'}
                         contenteditable={false}
                       >
                         <span class="text-black text-sm">{size}</span>
@@ -207,7 +207,7 @@
                 <div class="font-bold text-md text-black">Price</div>
                 <div class="text-black">${currentPrice}</div>
               </div>
-              <button class="bg-purple-700 text-white font-bold py-2 px-4 rounded-full" on:click={() => addProduct(product.variants[0]?.id)}
+              <button class="bg-red-400 text-white font-bold py-2 px-4 rounded-full" on:click={() => addProduct(product.variants[0]?.id)}
      on:keydown|preventDefault={(event) =>
               event.key === "Enter" ||
               (event.key === " " && console.log("/products"))}>

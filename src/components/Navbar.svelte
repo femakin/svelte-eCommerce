@@ -14,13 +14,13 @@
             <Icon src={AiOutlineShoppingCart} />
             <!-- {
               productId?.length >= 1 &&
-              <div class="absolute px-1  bg-red-500 -top-1 -right-1 rounded-full border-2 border-white text-white" id="cart" style="font-size: 10px">
+              <div class="absolute px-1  bg-red-400 -top-1 -right-1 rounded-full border-2 border-white text-white" id="cart" style="font-size: 10px">
                 {productId?.length}
               </div>
             } -->
             {#if productId?.length >= 1}
               <div
-                class="absolute px-1  bg-red-500 -top-1 -right-1 rounded-full border-2 border-white text-white"
+                class="absolute px-1  bg-red-400 -top-1 -right-1 rounded-full border-2 border-white text-white"
                 id="cart"
                 style="font-size: 10px"
               >
@@ -31,7 +31,7 @@
         </div>
       </a>
       <!-- <div class="flex-grow font-bold text-lg" on:click={() => navigate(`/home`)}>
-        <span>Noble's Shop</span>
+        <span>Best Store</span>
       </div> -->
       <div
         on:keydown|preventDefault={(event) =>
@@ -41,7 +41,7 @@
       >
 
         <a href="/">
-   <span>Noble's Shop</span>
+   <span>Best Store</span>
         </a>
       </div>
       <div class="menu hidden md:flex flex-col md:flex-row mt-5 md:mt-0 gap-16">
@@ -76,13 +76,13 @@
               <Icon src={AiOutlineShoppingCart} />
               <!-- {
                 productId?.length >= 1 &&
-                <div class="absolute px-1  bg-red-500 -top-1 -right-1 rounded-full border-2 border-white text-white" id="cart" style="font-size: 10px">
+                <div class="absolute px-1  bg-red-400 -top-1 -right-1 rounded-full border-2 border-white text-white" id="cart" style="font-size: 10px">
                   {productId?.length}
                 </div>
               } -->
               {#if productId?.length >= 1}
                 <div
-                  class="absolute px-1  bg-red-500 -top-1 -right-1 rounded-full border-2 border-white text-white"
+                  class="absolute px-1  bg-red-400 -top-1 -right-1 rounded-full border-2 border-white text-white"
                   id="cart"
                   style="font-size: 10px"
                 >

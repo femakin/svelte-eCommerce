@@ -32,7 +32,7 @@ export const cartDetails = writable({
 
         <div class='mt-40'>
   <div class='flex'>
-    <div class='flex-grow text-4xl font-extrabold text-center'>Special Qualities For You</div>
+    <div class='flex-grow text-4xl font-extrabold text-center'>Best Qualities You Can Trust</div>
   </div>
   <div class='max-w-12xl mx-auto h-full flex flex-wrap justify-center py-28 gap-10'>
     {#each data?.products as x, i}
@@ -42,7 +42,7 @@ export const cartDetails = writable({
           <a href={`/singlepage/${x.id}`} data-mdb-ripple='true' data-sveltekit-prefetch data-mdb-ripple-color='light'>
             <img class='rounded-t-lg' src='{x.thumbnail}' alt='' />
           </a>
-          <div class='bg-purple-100 py-8 relative font-bold text-xl w-full flex flex-col justify-center px-6'>
+          <div class='bg-red-400 py-8 relative font-bold text-gray-100 text-xl w-full flex flex-col justify-center px-6'>
             <div class=''>{x.title}</div>
             <div class=''>
               &euro; {x.variants[0].prices[0].amount / 100}
