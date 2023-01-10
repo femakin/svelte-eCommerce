@@ -10,7 +10,7 @@ This tutorial uses Medusa v16+. It is not guaranteed that it will work with futu
 
 ## Prerequisites
 
-- [Node.js at least v14](https://docs.medusajs.com/tutorial/set-up-your-development-environment#nodejs)
+- [Node.js at least v16](https://docs.medusajs.com/tutorial/set-up-your-development-environment#nodejs)
 <!-- - _Every pre-requisite as a bullet point_ -->
 
 ## How to Install
