@@ -1,4 +1,4 @@
-# <Tutorial Name>
+# Svelte Ecommerce
 
 This repository is the codebase of tutorial [Creating a Svelte Ecommerce Store with Medusa.](https://github.com/femakin/Best-Store).
 
@@ -15,18 +15,18 @@ This tutorial uses Medusa v14+. It is not guaranteed that it will work with futu
 
 ## How to Install
 
-_You may change these steps per your article._
+<!-- _You may change these steps per your article._ -->
 
 1. Clone this repository:
 
 ```bash
-git clone <https://github.com/femakin/Best-Store.git>
+git clone https://github.com/femakin/Best-Store.git
 ```
 
 2. Change directory and install dependencies:
 
 ```bash
-cd <svelte-eCommerce>
+cd svelte-eCommerce
 npm install
 ```
 
