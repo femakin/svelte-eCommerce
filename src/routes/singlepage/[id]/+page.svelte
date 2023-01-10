@@ -128,6 +128,7 @@
                           on:click={() => (currentImg = i)}
                           title={imgArr[i]?.url}
                           class="w-16 h-24 flex-none"
+                            on:keydown={() => (currentImg = i)}
                         >
                           <div
                             class="h-full w-full rounded-lg cursor-pointer shadow-lg border overflow-hidden"
@@ -167,6 +168,11 @@
                           ? "border-purple-300 bg-red-400"
                           : "border-gray-100"}
                         contenteditable={false}
+                        on:keydown={() => {
+                          currentSize = size;
+                          currentPrice = priceList[i];
+                          variantsId = product.variants[i].id;
+                        }}
                       >
                         <span class="text-black text-sm">{size}</span>
                       </div>
