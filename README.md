@@ -1,38 +1,41 @@
-# create-svelte
+# <Tutorial Name>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repository is the codebase of tutorial [Creating a Svelte Ecommerce Store with Medusa.](https://github.com/femakin/Best-Store).
 
-## Creating a project
+[Medusa Documentation](https://docs.medusajs.com/) | [Medusa Website](https://medusajs.com/) | [Medusa Repository](https://github.com/medusajs/medusa)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Medusa Version
+
+This tutorial uses Medusa v14+. It is not guaranteed that it will work with future releases.
+
+## Prerequisites
+
+- [Node.js at least v14](https://docs.medusajs.com/tutorial/set-up-your-development-environment#nodejs)
+<!-- - _Every pre-requisite as a bullet point_ -->
+
+## How to Install
+
+_You may change these steps per your article._
+
+1. Clone this repository:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone <https://github.com/femakin/Best-Store.git>
 ```
 
-## Developing
+2. Change directory and install dependencies:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+cd <svelte-eCommerce>
+npm install
+```
+
+3. Start Server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Other Resources
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<!-- _If any other resources in our documentation or other documentations are relevant to the tutorial, add them here._ -->
