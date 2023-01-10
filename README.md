@@ -6,7 +6,7 @@ This repository is the codebase of tutorial [Creating a Svelte Ecommerce Store w
 
 ## Medusa Version
 
-This tutorial uses Medusa v14+. It is not guaranteed that it will work with future releases.
+This tutorial uses Medusa v16+. It is not guaranteed that it will work with future releases.
 
 ## Prerequisites
 
