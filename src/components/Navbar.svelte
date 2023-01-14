@@ -26,7 +26,7 @@
 
       <div
         class="flex-grow font-bold text-lg"
-        on:click={() => console.log("/home")}
+
       >
         <a href="/">
           <span>Best Store</span>
@@ -36,13 +36,13 @@
         <div class="flex flex-col md:flex-row gap-12 capitalize">
           <div
             class="text-red-400 font-bold border-b border-red-400"
-            on:click={() => console.log("/home")}
+
           >
             <a href="/"> home</a>
           </div>
           <div
             class="text-red-400 font-bold border-b border-red-400"
-            on:click={() => console.log("/products")}
+
           >
             <a href="/products">products</a>
           </div>

@@ -20,27 +20,27 @@
   <div
     class="max-w-12xl mx-auto h-full flex flex-wrap justify-center py-28 gap-10"
   >
-    {#each data?.products as x, i}
+
+ {#each data?.products as product, i}
       <div class="">
         <div
-          on:click={() =>
-            console.log(`/singleproduct/${x?.id}`, { state: { id: x.id } })}
+
           class="rounded-lg shadow-lg bg-white max-w-sm"
         >
           <a
-            href={`/singlepage/${x?.id}`}
+            href={`/products/${product?.id}`}
             data-mdb-ripple="true"
             data-sveltekit-prefetch
             data-mdb-ripple-color="light"
           >
-            <img class="rounded-t-lg" src={x.thumbnail} alt="" />
+            <img class="rounded-t-lg" src={product?.thumbnail} alt="" />
           </a>
           <div
             class="bg-red-400 py-8 relative font-bold text-gray-100 text-xl w-full flex flex-col justify-center px-6"
           >
-            <div class="">{x.title}</div>
+            <div class="">{product?.title}</div>
             <div class="">
-              &euro; {x?.variants[0]?.prices[0]?.amount / 100}
+              &euro; {product?.variants[0]?.prices[0]?.amount / 100}
             </div>
           </div>
         </div>
