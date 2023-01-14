@@ -6,16 +6,23 @@
   import Navbar from "../components/Navbar.svelte";
   import { writable, derived } from "svelte/store";
 
-  export let data;
+  // export let data;
+  import {sharedLoad} from '../util/shared';
+	import { onMount } from "svelte";
 
-  export const cartDetails = writable({
-    item: [],
-  });
+  let products;
+    const loadData = async () => {
+        const data = await sharedLoad({ fetch });
+        products = data;
+        console.log(products, 'products')
+    }
+
+  $: loadData()
 </script>
 
 <div>
   <Navbar />
-  <div class="mt-40">
+   <div class="mt-40">
     <div class="flex">
       <div class="flex-grow text-4xl font-extrabold text-center">
         Best Qualities You Can Trust
@@ -33,7 +40,8 @@
     <div
       class="max-w-12xl mx-auto h-full flex flex-wrap justify-center py-28 gap-10"
     >
-      {#each data?.products as product, i}
+    {#if products}
+      {#each products?.products as product, i}
         <div class="">
           <div
 
@@ -58,6 +66,7 @@
           </div>
         </div>
       {/each}
+      {/if}
     </div>
   </div>
   <Footer />
