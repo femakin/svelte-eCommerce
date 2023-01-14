@@ -6,7 +6,16 @@
   // @ts-nocheck
 
   import "../../app.css";
-  export let data;
+	import { sharedLoad } from "../../util/shared";
+
+
+  let products;
+    const loadData = async () => {
+        const data = await sharedLoad({ fetch });
+        products = data;
+    }
+
+  $: loadData()
 </script>
 
 <Navbar />
@@ -21,7 +30,8 @@
     class="max-w-12xl mx-auto h-full flex flex-wrap justify-center py-28 gap-10"
   >
 
- {#each data?.products as product, i}
+{#if products?.products}
+ {#each products?.products as product, i}
       <div class="">
         <div
 
@@ -46,5 +56,6 @@
         </div>
       </div>
     {/each}
+{/if}
   </div>
 </div>

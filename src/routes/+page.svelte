@@ -4,17 +4,13 @@
   import Footer from "../components/Footer.svelte";
   import "../app.css";
   import Navbar from "../components/Navbar.svelte";
-  import { writable, derived } from "svelte/store";
 
-  // export let data;
   import {sharedLoad} from '../util/shared';
-	import { onMount } from "svelte";
 
   let products;
     const loadData = async () => {
         const data = await sharedLoad({ fetch });
         products = data;
-        console.log(products, 'products')
     }
 
   $: loadData()
