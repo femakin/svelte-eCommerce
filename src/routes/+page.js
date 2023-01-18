@@ -1,14 +1,14 @@
-// @ts-nocheck
+// // @ts-nocheck
 
-export const load = async ({ fetch }) => {
+// export const load = async ({ fetch }) => {
 
-    const productres = await fetch('http://localhost:9000/store/products/')
+//     const productres = await fetch('http://localhost:9000/store/products/')
 
-    const productdata = await productres.json()
+//     const productdata = await productres.json()
 
-    const products = productdata?.products
+//     const products = productdata?.products
 
-    return {
-        products: products
-    };
-}
+//     return {
+//         products: products
+//     };
+// }

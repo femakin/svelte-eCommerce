@@ -6,7 +6,18 @@
   // @ts-nocheck
 
   import "../../app.css";
-  export let data;
+	import { getProducts } from "../../util/shared";
+
+
+
+    let products;
+    const productData = async () => {
+        const data = await getProducts();
+        products = data;
+        console.log(products, 'products')
+    }
+
+  $: productData()
 </script>
 
 <Navbar />
@@ -21,7 +32,7 @@
     class="max-w-12xl mx-auto h-full flex flex-wrap justify-center py-28 gap-10"
   >
 
- {#each data?.products as product, i}
+  {#each products?.products as product, i}
       <div class="">
         <div
 

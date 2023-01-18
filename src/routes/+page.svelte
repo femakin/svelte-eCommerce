@@ -7,17 +7,17 @@
   import { writable, derived } from "svelte/store";
 
   // export let data;
-  import {sharedLoad} from '../util/shared';
-	import { onMount } from "svelte";
+  import {getProducts} from '../util/shared';
+
 
   let products;
-    const loadData = async () => {
-        const data = await sharedLoad({ fetch });
+    const productData = async () => {
+        const data = await getProducts();
         products = data;
         console.log(products, 'products')
     }
 
-  $: loadData()
+  $: productData()
 </script>
 
 <div>

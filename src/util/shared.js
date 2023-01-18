@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-export const sharedLoad = async ({ fetch }) => {
+export const getProducts = async () => {
 
     try {
         const productres = await fetch('http://localhost:9000/store/products/')
