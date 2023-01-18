@@ -6,6 +6,7 @@
   import Navbar from "../../../components/Navbar.svelte";
   import Swal from 'sweetalert2'
   export let data;
+
   let responseData = [];
   let currentImg = 0;
   let currentSize = "S";

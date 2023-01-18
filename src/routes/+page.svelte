@@ -4,7 +4,6 @@
   import Footer from "../components/Footer.svelte";
   import "../app.css";
   import Navbar from "../components/Navbar.svelte";
-  import { writable, derived } from "svelte/store";
 
   // export let data;
   import {getProducts} from '../util/shared';
@@ -14,7 +13,6 @@
     const productData = async () => {
         const data = await getProducts();
         products = data;
-        console.log(products, 'products')
     }
 
   $: productData()

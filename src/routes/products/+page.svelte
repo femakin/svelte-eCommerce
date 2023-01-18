@@ -32,7 +32,8 @@
     class="max-w-12xl mx-auto h-full flex flex-wrap justify-center py-28 gap-10"
   >
 
-  {#each products?.products as product, i}
+{#if products?.products}
+ {#each products?.products as product, i}
       <div class="">
         <div
 
@@ -57,5 +58,6 @@
         </div>
       </div>
     {/each}
+{/if}
   </div>
 </div>
