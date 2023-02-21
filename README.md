@@ -26,7 +26,7 @@ git clone https://github.com/femakin/Best-Store.git
 2. Change directory and install dependencies:
 
 ```bash
-cd Best-Store
+cd svelte-eCommerce
 npm install
 ```
 
