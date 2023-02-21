@@ -33,7 +33,7 @@
 
     try {
       const response = await axios.get(
-        `http://localhost:9000/store/products/${data.params.id}`
+        `${import.meta.env.VITE_API_BASE_URL}/${data.params.id}`
       );
       productData = response?.data;
       product = response?.data?.product;
@@ -50,7 +50,7 @@
       if (!cartId) {
         const config = {
           method: "post",
-          url: "http://localhost:9000/store/carts",
+          url: `${import.meta.env.VITE_API_BASE_URL}/store/carts`,
           headers: {
             Cookie:
               "connect.sid=s%3ABtOTTvAMucVXI50x7QfBxVs_htUl9tH0.qVmwCkwQ1N2kv9KsjAwB5LZq7NKeWaQxnmC%2FGkToOTA",
@@ -74,7 +74,7 @@
     cartId = browser && localStorage.cart_id;
     axios
       .post(
-        `http://localhost:9000/store/carts/${localStorage.cart_id}/line-items`,
+        `${import.meta.env.VITE_API_BASE_URL}/store/carts/${localStorage.cart_id}/line-items`,
         {
           variant_id: data,
           quantity: 1,

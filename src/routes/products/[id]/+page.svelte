@@ -26,7 +26,7 @@
 if (!cartId) {
     axios({
         method: 'post',
-        url: `http://localhost:9000/store/carts`,
+        url:  `${import.meta.env.VITE_API_BASE_URL}/store/carts`,
         withCredentials: true
     })
     .then(response => {
@@ -41,7 +41,7 @@ if (!cartId) {
   const fetchData = async () => {
        cartId = browser && localStorage.getItem('cart_id')
     axios
-      .get(`http://localhost:9000/store/products/${data.params.id}`)
+      .get(`${import.meta.env.VITE_API_BASE_URL}/store/products/${data.params.id}`)
       .then((response) => {
         if (response.data.product) {
             responseData = response?.data
@@ -63,7 +63,7 @@ $: fetchData();
 
     try {
         const response = await axios.post(
-            `http://localhost:9000/store/carts/${localStorage.cart_id}/line-items`,
+            `${import.meta.env.VITE_API_BASE_URL}/store/carts/${localStorage.cart_id}/line-items`,
             {
                 variant_id: data,
                 quantity: 1,
